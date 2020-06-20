@@ -7,7 +7,7 @@ docker image pull myoung34/github-runner:latest
 
 docker run -d --restart always --name $1-github-organization-actions-runner-$2 \
   -e REPO_URL=https://github.com/$1 \
-  -e RUNNER_NAME=$1-github-organization-actions-runner-$2 \
+  -e RUNNER_NAME=$1-runner-$2 \
   -e RUNNER_TOKEN=$2 \
   -e RUNNER_WORKDIR=/tmp/$1-github-organization-actions-runner-$2-workdir \
   -v /var/run/docker.sock:/var/run/docker.sock \
